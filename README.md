@@ -1,11 +1,11 @@
 [![DOI](https://zenodo.org/badge/872898055.svg)](https://doi.org/10.5281/zenodo.14211991)
-[![Go CI](https://github.com/LLMGuardian/Guardian/actions/workflows/go.yml/badge.svg)](https://github.com/LLMGuardian/Guardian/actions/workflows/go.yml)
+[![Go CI](https://github.com/AMK9978/Guardian/actions/workflows/go.yml/badge.svg)](https://github.com/AMK9978/Guardian/actions/workflows/go.yml)
 
 # LLM Guardian Kernel
 A plug-and-play end-to-end LLM guardian for seamless integration.
 The kernel is in charge of fanning out requests to the connected 
 security plugins based on user and collecting their responses to judge whether a prompt
-is malicious or benign. You can also use the kernel as a rate limiter, authentication unit, or quota management.
+is malicious or benign. You can also use the kernel as a rate limiter, authentication unit, or quota management. It is the heart of the [LLM Guardian System](https://github.com/LLMGuardian).
 
 ## Features & Qualities
 - Written in Golang to be super-fast and production-ready
@@ -15,6 +15,7 @@ is malicious or benign. You can also use the kernel as a rate limiter, authentic
 - Define tasks and apply them to users/groups
 - SOLID obedient and Database agnostic (MongoDB by default)
 - Test covered, CI, linter
+- Uses [Google Wire](https://github.com/google/wire) for compile-time dependency injection
 
 
 ## Comparison with OpenShield
@@ -27,7 +28,7 @@ denormalized data for faster retrieval. If the external plugin calls get added, 
 ## Get Started
 Docker:
 ```
-git clone git@github.com:LLMGuardian/Guardian.git
+git clone git@github.com:amk9978/Guardian.git
 docker-compose up --build -d
 ```
 
